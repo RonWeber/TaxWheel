@@ -30,7 +30,7 @@
         <link rel="stylesheet" href="main.css" type="text/css" />
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <script type="text/javascript" src="./Winwheel.js"></script>
-        <script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenMax.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenMax.min.js"></script>
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     </head>
     <body>
@@ -38,16 +38,22 @@
             <h1>Tax Wheel</h1>
             <table cellpadding="0" cellspacing="0" border="0">
                 <tr>
-                    <td>
+                    <td width="400">
                         <div class="power_controls">
+                            <p>The US government spends six trillion dollars a year.  One way or another, all that money comes from your taxes.</p>
+                            <p>Have you ever wanted to know what the government spent your tax dollars in particular on last year?</p>
+                            <p>Spin the wheel to find out!</p>
                             <br />
                             <img id="spin_button" src="spin_on.png" alt="Spin" onClick="startSpin();" />
                         </div>
                     </td>
-                    <td width="800" height="900" class="the_wheel" align="center" valign="center">
-                        <canvas id="canvas" width="750" height="750">
-                            <p style="{color: white}" align="center">Sorry, your browser doesn't support canvas. Please try another.</p>
-                        </canvas>
+                    <td width="800" height="800" class="the_wheel" align="center" valign="center">
+                        <div id="canvasContainer">
+                            <canvas id="canvas" width="750" height="750">
+                                <p style="{color: white}" align="center">Sorry, your browser doesn't support canvas. Please try another.</p>
+                            </canvas>
+                            <img id="prizePointer" src="Arrow.png" alt="V" />
+                        </div>
                     </td>
                 </tr>
             </table>
